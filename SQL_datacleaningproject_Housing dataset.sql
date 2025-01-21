@@ -1,4 +1,17 @@
-
+-- Project Title: Data Cleaning for Housing Dataset
+  --Key Objectives
+--1. Standardize Date Formats:
+--2. Convert and standardize the SaleDate field into a consistent Date format.
+--3. Handle Missing Data:
+--4. Identify and fill missing property addresses using JOINs based on unique identifiers.
+--5. Split Address Fields:
+--6. Extract and separate address components (e.g., street, city, and state) into distinct columns for better usability.
+--7. Update Inconsistent Values:
+--8. Replace "Y" and "N" in the SoldAsVacant field with more meaningful values ("Yes" and "No").
+--9. Remove Duplicates:
+--10. Identify and delete duplicate rows based on specific columns (PropertyAddress, ParcelID, LegalReference).
+--11. Optimize the Dataset:
+--12. Drop unnecessary columns to improve data structure and reduce redundancy.
 
 --1. Cleaning data
 
@@ -47,7 +60,7 @@ select *
 from housing 
 where PropertyAddress is null;
 
---Seperating coloumn address 
+--Separating column address 
 
 select PropertyAddress, substring(PropertyAddress, 1, CHARINDEX(',', PropertyAddress)-1),
 SUBSTRING(PropertyAddress, CHARINDEX(',', PropertyAddress)+1, len(PropertyAddress)) 
@@ -97,8 +110,6 @@ set Ownersplitcity= PARSENAME(REPLACE(OwnerAddress, ',', '.'), 2);
 Update housing
 set Ownersplitstate= PARSENAME(REPLACE(OwnerAddress, ',', '.'), 1);
 
-select * 
-from housing;
 
 --change Y to yes, N to No
 
@@ -142,12 +153,12 @@ drop column OwnerAddress, PropertyAddress
 alter table housing
 drop column SaleDate;
 
+-- to see the final dataset how it looks like now. 
 
-
-
-
-
-
-
-select *
+select * 
 from housing;
+
+
+
+
+
