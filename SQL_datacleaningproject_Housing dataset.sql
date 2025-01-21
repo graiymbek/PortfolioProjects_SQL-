@@ -1,17 +1,12 @@
--- Project Title: Data Cleaning for Housing Dataset
-  --Key Objectives
---1. Standardize Date Formats:
---2. Convert and standardize the SaleDate field into a consistent Date format.
---3. Handle Missing Data:
---4. Identify and fill missing property addresses using JOINs based on unique identifiers.
---5. Split Address Fields:
---6. Extract and separate address components (e.g., street, city, and state) into distinct columns for better usability.
---7. Update Inconsistent Values:
---8. Replace "Y" and "N" in the SoldAsVacant field with more meaningful values ("Yes" and "No").
---9. Remove Duplicates:
---10. Identify and delete duplicate rows based on specific columns (PropertyAddress, ParcelID, LegalReference).
---11. Optimize the Dataset:
---12. Drop unnecessary columns to improve data structure and reduce redundancy.
+--Project Title: Data Cleaning for Housing Dataset
+--Key Objectives:
+--Convert and standardize the SaleDate field into a consistent Date format.
+--Identify and fill missing property addresses using JOINs based on unique identifiers.
+--Extract and separate address components (e.g., street, city, and state) into distinct columns for better usability.
+--Replace "Y" and "N" in the SoldAsVacant field with more meaningful values ("Yes" and "No").
+--Identify and delete duplicate rows based on specific columns (PropertyAddress, ParcelID, LegalReference).
+--Drop unnecessary columns to improve data structure and reduce redundancy.
+
 
 --1. Cleaning data
 
