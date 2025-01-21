@@ -1,10 +1,18 @@
-Covid 19 Data Analysis: 
---1.View the tables first 20 rows to get idea and details about data
-select TOP 10 *
-from CovidDeaths$;
+Project Title: COVID-19 Vaccination and Population Analysis:
+Objective:
+To showcase SQL skills by performing advanced data analysis on COVID-19 vaccination and population datasets, focusing on:
+1. Tracking vaccination progress on a daily basis.
+2. Calculating rolling totals of vaccinations for specific countries.
+3. Analyzing the percentage of the population vaccinated over time.
+4. Demonstrating SQL techniques like window functions, joins, and grouping. 
+ 
+--1.View the tables first 20 rows to get ideas and details about data
 
-select TOP 20 *
-from CovidVaccinations$;
+ SELECT TOP 20 *
+FROM CovidDeaths$;
+
+SELECT TOP 20 *
+FROM CovidVaccinations$;
 
  --2.this query show how many COVID-19 total deaths were recorded in Kazakhstan?
  
